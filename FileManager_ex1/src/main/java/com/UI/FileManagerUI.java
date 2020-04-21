@@ -50,8 +50,6 @@ public class FileManagerUI {
                 inst.encodeFile(command[1], command[2], 5);
             } else if ("decode".equals(command[0])) {
                 inst.encodeFile(command[1], command[2], -5);
-            } else if ("cd".equals(command[0])){
-                ;
             }
         }while(!command[0].equals("quit"));
     }
