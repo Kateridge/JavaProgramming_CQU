@@ -33,7 +33,6 @@ public class Function {
         for(int i = 0; i < expression.length(); i++){
             //一次取出一个char并转化为字符串类型
             temp = String.valueOf(expression.charAt(i));
-            System.out.print(temp);
             //如果这个字符是数字或小数点，则记录下来
             if(temp.matches("[0-9]|\\.")) end++;
             //如果这个字符不是数字
@@ -42,7 +41,8 @@ public class Function {
                     opStack.push(temp);
                 }
                 else{
-                    opQueue.add(expression.substring(start, end));
+                    if(start != end)
+                        opQueue.add(expression.substring(start, end));
                     // 如果是右括号，执行出栈操作，并将出栈的元素放入队列，直到弹出栈的是左括号，最后将左括号弹出
                     if (temp.equals(")")) {
                         while (!opStack.peek().equals("(")) {
@@ -82,6 +82,9 @@ public class Function {
         double result = 0;
         //从前往后遍历后缀表达式
         int sufQueue_length = sufQueue.size();
+        for(String str:sufQueue){
+            System.out.print(str);
+        }
         for(int i = 0; i < sufQueue_length; i++){
             temp = sufQueue.poll();
             //碰到数字直接入栈

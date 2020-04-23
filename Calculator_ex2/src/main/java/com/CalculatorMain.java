@@ -1,12 +1,8 @@
 package com;
 
 import java.awt.*;
-import java.awt.event.*;
-import java.io.IOException;
-
 import javax.swing.*;
 import java.lang.*;
-import java.net.*;
 
 public class CalculatorMain extends JFrame{
     JTextField textplace = new JTextField("");
