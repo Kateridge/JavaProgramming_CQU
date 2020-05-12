@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="WebLogin_ex3:war">
+    <output-path>$PROJECT_DIR$/WebLogin_ex3/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>WebLogin_ex3</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="WebLogin_ex3.war">
+      <element id="artifact" artifact-name="WebLogin_ex3:war exploded" />
+    </root>
+  </artifact>
+</component>
